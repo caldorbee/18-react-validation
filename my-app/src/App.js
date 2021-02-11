@@ -24,22 +24,22 @@ export default function SignUp() {
       <h1>Profile Form - All fields required</h1>
       <div className="sign-up">
         <p>Name</p>
-        <input type="text" onChange={e => setName(e.target.value)} value={name} placeholder="Michael"/>
+        <input required type="text" onChange={e => setName(e.target.value)} value={name} placeholder="Michael"/>
         {errors.name && <p style={{color: "red"}}>{errors.name}</p>}
         <p>Email</p>
-        <input type="email" onChange={e => setEmail(e.target.value)} value={email} placeholder="email@test.com"/>
+        <input required type="email" onChange={e => setEmail(e.target.value)} value={email} placeholder="email@test.com"/>
         {errors.email && <p style={{color: "red"}}>{errors.email}</p>}
         <p>Username</p>
-        <input type="text" onChange={e => setUserName(e.target.value)} value={userName} placeholder="myusername"/>
+        <input required type="text" onChange={e => setUserName(e.target.value)} value={userName} placeholder="myusername"/>
         {errors.userName && <p style={{color: "red"}}>{errors.userName}</p>}
         <p>Password</p>
-        <input type="password" onChange={e => setPassword(e.target.value)} value={password} placeholder="*****"/>
+        <input required type="password" onChange={e => setPassword(e.target.value)} value={password} placeholder="*****"/>
         {errors.password && <p style={{color: "red"}}>{errors.password}</p>}
         <p>Confirm password</p>
-        <input type="password" onChange={e => setConfirmPassword(e.target.value)} value={confirmPassword} placeholder="*****"/>
+        <input required type="password" onChange={e => setConfirmPassword(e.target.value)} value={confirmPassword} placeholder="*****"/>
         {errors.confirmPassword && <p style={{color: "red"}}>{errors.confirmPassword}</p>}
         <p>Website</p>
-        <input type="url" id="a" onChange={e => setWebsite(e.target.value)} value={website} placeholder="www.mywebsite.com"/>
+        <input required type="url" id="a" onChange={e => setWebsite(e.target.value)} value={website} placeholder="www.mywebsite.com"/>
         {errors.website && <p style={{color: "red"}}>{errors.website}</p>}
         <button onClick={handleSignUp} id="submit">Submit</button>
       </div>
